@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/musicPlayFragment">
+
+    <fragment
+        android:id="@+id/musicPlayFragment"
+        android:name="com.flo.musicplayer.MusicPlayFragment"
+        android:label="MusicPlayFragment" >
+        <action
+            android:id="@+id/action_musicPlayFragment_to_lyricsFragment"
+            app:destination="@id/lyricsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lyricsFragment"
+        android:name="com.flo.musicplayer.LyricsFragment"
+        android:label="LyricsFragment" >
+        <argument
+            android:name="lyrics"
+            app:argType="com.flo.musicplayer.MusicLyrics[]"/>
+    </fragment>
+</navigation>
